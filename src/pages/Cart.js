@@ -22,7 +22,7 @@ const Cart = () => {
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               {
                 images.map((e) => {
-                  return <img src={e} style={{ width: '300px', height: '150px', margin: '10px' }} />
+                  return <img src={e} style={{ width: '300px', height: '300px', margin: '10px' }} />
                 })
               }
             </div>
