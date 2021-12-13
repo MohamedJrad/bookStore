@@ -14,7 +14,7 @@ const Home = () => {
             <Hero />
             <section className="featured">
                 <header className="featured-head">
-                    <h3>Best Offers !</h3>
+                    <h3 className="jrad">Best Offers ! 🔥🔥</h3>
                 </header>
                 <div className="books featured-list">
                     {featured.map(({ id, image, title,description }) => (

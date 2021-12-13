@@ -87,9 +87,12 @@ const CheckoutForm = () => {
           {error}
         </div>
       </div>
-      <button type="submit" className="btn">
+      <button type="submit" className="btn2">
         Submit Payment
       </button>
+      <p></p>
+      <p></p>
+      <p></p>
     </form>
   );
 };
