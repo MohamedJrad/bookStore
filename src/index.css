@@ -101,8 +101,7 @@ nav ul {
   background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url(./assets/hero-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  min-height: 43vh;
+  background-position: 50% 80%;  min-height: 43vh;
   color: white;
   display: flex;
   flex-direction: column;
