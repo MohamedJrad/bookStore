@@ -32,7 +32,8 @@ const Admin = () => {
             if (!bookDetails.title || !bookDetails.price) return
             console.log(bookDetails)
             const l = await API.graphql(graphqlOperation(createBook, { input: bookDetails }))
-            setBookDetails({ title: "", description: "", image: "", author: "", price: "" })
+            console.log(l)
+            setBookDetails({ title: "", description: "", images: [], author: "", price: "" })
             fetchBooks()
 
         } catch (err) {
@@ -54,9 +55,16 @@ const Admin = () => {
                 contentType: file.type
             });
             // Retrieve the uploaded file to display
-            const image = await Storage.get(key, { level: 'public' })
-            setImages([...images, url]);
-            setBookDetails({ ...bookDetails, images: images });
+            Storage.get(key, { level: 'public' }).then((e) => {
+                console.log('image', e)
+                let list = images
+                list.push(e)
+                console.log(list)
+                setImages(list);
+                console.log(images)
+                setBookDetails({ ...bookDetails, images: images });
+            })
+
         } catch (err) {
             console.log(err);
         }

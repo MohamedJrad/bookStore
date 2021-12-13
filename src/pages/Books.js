@@ -12,10 +12,10 @@ const Books = () => {
 
     return (
         <section className="books">
-            {books.map(({ image: image, id, title }) => (
+            {books.map(({ images, id, title }) => (
                 <article key={id} className="book">
                     <div className="book-image">
-                        <img src={image} alt={title} />
+                        <img src={images[0]} alt={title} style={{ height: '100%', width: '100%', objectFit: 'cover', maxHeight: '200px' }} />
                     </div>
                     <Link to={`books/${id}`} className="btn book-link">details</Link>
                 </article>

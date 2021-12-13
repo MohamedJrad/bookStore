@@ -9,6 +9,7 @@ const Home = () => {
     if (!featured.length) {
         return <h3>No Featured Houses</h3>
     }
+    console.log('featured', featured)
     return (
         <>
             <Hero />
@@ -17,10 +18,10 @@ const Home = () => {
                     <h3 className="jrad">Best Offers ! 🔥🔥</h3>
                 </header>
                 <div className="books featured-list">
-                    {featured.map(({ id, image, title,description }) => (
+                    {featured.map(({ id, images, title, description }) => (
                         <article key={id} className="book featured-book">
                             <div className="book-image">
-                               {/* <img src={image} alt={title} />*/}
+                                <img src={images[0]} alt={title} style={{ height: '100%', width: '100%', objectFit: 'cover', maxHeight: '200px' }} />
                                 <h1>alt={description}</h1>
                             </div>
                             <Link to={`books/${id}`} className="btn book-link">details</Link>
