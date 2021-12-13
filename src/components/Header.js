@@ -37,8 +37,18 @@ const Header = () => {
     return (
         <header className="main-head">
             <nav>
+                <div>
+               
+                <Link to="/">
+                <img src="./test.png"      width="40" 
+                height="50" marginright="1px"/>
+                </Link>
+                </div>
                 <h1 id="logo">Ija Ekri</h1>
                 <ul>
+                    <li>
+                        
+                        </li>
                     <li>
                         <Link to="/">Home</Link>
                     </li>
