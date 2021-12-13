@@ -37,13 +37,13 @@ const Header = () => {
     return (
         <header className="main-head">
             <nav>
-                <h1 id="logo">Wisdomly</h1>
+                <h1 id="logo">Ija Ekri</h1>
                 <ul>
                     <li>
                         <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="/books">Books</Link>
+                        <Link to="/books">Houses</Link>
                     </li>
                     <li>
                         <Link to="/cart">Cart</Link>

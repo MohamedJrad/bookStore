@@ -26,11 +26,7 @@ const Cart = () => {
               <p>{title}</p>
               <p>$ {price}</p>
             </div>
-            <div className="amount">
-              <button onClick={() => increaseAmount(id)}><FiChevronUp /></button>
-              <p>{amount}</p>
-              <button onClick={() => decreaseAmount(id, amount)}><FiChevronDown /></button>
-            </div>
+
           </article>
         ))}
       </div>

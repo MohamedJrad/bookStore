@@ -14,13 +14,14 @@ const Home = () => {
             <Hero />
             <section className="featured">
                 <header className="featured-head">
-                    <h3>Featured Collection</h3>
+                    <h3>Best Offers !</h3>
                 </header>
                 <div className="books featured-list">
-                    {featured.map(({ id, image, title }) => (
+                    {featured.map(({ id, image, title,description }) => (
                         <article key={id} className="book featured-book">
                             <div className="book-image">
-                                <img src={image} alt={title} />
+                               {/* <img src={image} alt={title} />*/}
+                                <h1>alt={description}</h1>
                             </div>
                             <Link to={`books/${id}`} className="btn book-link">details</Link>
                         </article>

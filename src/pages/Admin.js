@@ -22,15 +22,21 @@ const Admin = () => {
     return (
         <div>
             <AmplifyAuthenticator>
-
-                <Button type="primary" onClick={showModal}>
-                    Add a New Book
-                </Button>
-                <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+                <div className="wadii">
+                    <Button type="primary" onClick={showModal}>
+                    Add a New House 🔥
+                    </Button>
+                </div>
+                <Modal title="House add" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} className="model">
+                    <div className="mehdi">
                     <AddBook />
+                    </div>
                 </Modal>
                 <Home />
-                <AmplifySignOut></AmplifySignOut>
+                <div className="bye">
+                <AmplifySignOut>
+                </AmplifySignOut>
+                </div>
             </AmplifyAuthenticator>
 
         </div>
