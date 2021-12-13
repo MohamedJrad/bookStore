@@ -33,7 +33,7 @@ const BookDetails = () => {
       <div className="detail-image">
 
 
-        <AwesomeSlider style={{ height: '300px', width: '250px' }}>{
+        <AwesomeSlider style={{ height: '550px', width: '550px' }}>{
           images.map((e) => {
             return <div data-src={e} />
           })
@@ -44,7 +44,8 @@ const BookDetails = () => {
         <h2>{title}</h2>
         <p>{description}</p>
         <h3>{author}</h3>
-        <h4>Price - $ {price}</h4>
+        <h4>Price : {price} - DT</h4>
+        <div className="yass">
         <button
           className="btn"
           onClick={() => {
@@ -54,6 +55,7 @@ const BookDetails = () => {
         >
           Add to Cart
         </button>
+        </div>
       </div>
     </section>
   );
