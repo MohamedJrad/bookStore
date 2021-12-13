@@ -23,7 +23,7 @@ const Home = () => {
                             <div className="book-image">
 
                                 <img src={images[0]} alt={title} style={{ height: '100%', width: '100%', objectFit: 'cover', maxHeight: '200px' }} />
-                                <h1>alt={description}</h1>
+                                <h1>{description}</h1>
 
                             </div>
                             <Link to={`books/${id}`} className="btn book-link">details</Link>
