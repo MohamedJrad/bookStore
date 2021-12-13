@@ -33,12 +33,12 @@ const CartProvider = ({ children }) => {
   };
 
   const addToCart = (book) => {
-    const { id, title, price, image } = book;
+    const { id, title, price, images } = book;
     const cartItem = [...cart].find((item) => item.id === id);
     if (cartItem) {
       increaseAmount(id);
     } else {
-      const cartItems = [...cart, { id, title, image, price, amount: 1 }];
+      const cartItems = [...cart, { id, title, images, price, amount: 1 }];
       setCart(cartItems);
     }
   };

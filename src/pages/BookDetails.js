@@ -26,19 +26,30 @@ const BookDetails = () => {
     l.push({ source: element })
 
   });
-  console.log(l)
+
   return (
     <section className="book-details">
 
       <div className="detail-image">
 
 
-        <AwesomeSlider style={{ height: '550px', width: '550px' }}>{
-          images.map((e) => {
-            return <div data-src={e} />
-          })
-        }
-        </AwesomeSlider>
+        {/* <AwesomeSlider style={{ height: '550px', width: '550px' }}
+
+          play={true}
+          cancelOnInteraction={false}
+          interval={500}
+
+
+        > */}
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          {
+            images.map((e) => {
+              return <img src={e} style={{ width: '300px', height: '150px', margin: '10px' }} />
+            })
+          }
+        </div>
+
+        {/* </AwesomeSlider> */}
       </div>
       <div className="detail-description">
         <h2>{title}</h2>
@@ -46,15 +57,15 @@ const BookDetails = () => {
         <h3>{author}</h3>
         <h4>Price : {price} - DT</h4>
         <div className="yass">
-        <button
-          className="btn"
-          onClick={() => {
-            addToCart({ ...book, id });
-            history.push("/cart");
-          }}
-        >
-          Add to Cart
-        </button>
+          <button
+            className="btn"
+            onClick={() => {
+              addToCart({ ...book, id });
+              history.push("/cart");
+            }}
+          >
+            Add to Cart
+          </button>
         </div>
       </div>
     </section>

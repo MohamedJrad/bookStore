@@ -9,7 +9,7 @@ const Home = () => {
     if (!featured.length) {
         return <h3>No Featured Houses</h3>
     }
-    console.log('featured', featured)
+
     return (
         <>
             <Hero />

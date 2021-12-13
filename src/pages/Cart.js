@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom";
 const Cart = () => {
   const history = useHistory();
   const { cart, total, increaseAmount, decreaseAmount } = useContext(CartContext);
-
+  console.log(cart)
   if (!cart.length) {
     return <h3>Empty Cart</h3>
   }
@@ -17,10 +17,14 @@ const Cart = () => {
         <h2>My Cart</h2>
       </header>
       <div className="cart-wrapper">
-        {cart.map(({ id, title, price, image, amount }) => (
+        {cart.map(({ id, title, price, images, amount }) => (
           <article key={id} className="cart-item">
-            <div className="image">
-              <img src={image} alt="cart item" />
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              {
+                images.map((e) => {
+                  return <img src={e} style={{ width: '300px', height: '150px', margin: '10px' }} />
+                })
+              }
             </div>
             <div className="details">
               <p>{title}</p>
