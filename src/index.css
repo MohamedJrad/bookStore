@@ -132,7 +132,7 @@ nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 
 }
 
@@ -222,8 +222,9 @@ nav ul {
   flex: 1 1 50rem;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 75%;
+  height: 550px;
   padding: 0 5rem;
+  width: auto;
 }
 
 /* Admin Section */

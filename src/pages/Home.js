@@ -20,8 +20,8 @@ const Home = () => {
                     {featured.map(({ id, image, title,description }) => (
                         <article key={id} className="book featured-book">
                             <div className="book-image">
-                               {/* <img src={image} alt={title} />*/}
-                                <h1>alt={description}</h1>
+                               <img src={image} alt={title} />
+                                <h1>{description}</h1>
                             </div>
                             <Link to={`books/${id}`} className="btn book-link">details</Link>
                         </article>

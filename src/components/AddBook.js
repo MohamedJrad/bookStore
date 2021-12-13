@@ -115,11 +115,11 @@ const Admin = () => {
                             /></p>
                         </div>
                         <div className="author-form">
-                            <p><label htmlFor="author">Address</label></p>
+                            <p><label htmlFor="author">Phone Number</label></p>
                             <p><input
                                 name="author"
                                 type="text"
-                                placeholder="Type the house's address"
+                                placeholder="Type the owner's Phone Number (216) -- --- ---"
                                 onChange={(e) => setBookDetails({ ...bookDetails, author: e.target.value })}
                                 required
                             /></p>
